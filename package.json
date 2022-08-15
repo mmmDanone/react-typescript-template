@@ -1,0 +1,86 @@
+{
+  "name": "react-typescript-template",
+  "version": "1.0.0",
+  "description": "react-typescript-template",
+  "scripts": {
+    "dev-server": "cross-env NODE_ENV=development BABEL_ENV=development TYPE_SERVER_ENV=webpackDevServer ts-node --project tsnodeconfig.json webpack/scripts/webpack.dev-serv.ts",
+    "dev-build": "cross-env NODE_ENV=development BABEL_ENV=development ts-node --project tsnodeconfig.json webpack/scripts/webpack.build.ts",
+    "prod-build": "cross-env NODE_ENV=production BABEL_ENV=production ts-node --project tsnodeconfig.json webpack/scripts/webpack.build.ts"
+  },
+  "author": "Ruslan Minniakhmetov",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmmDanone/react-typescript-template.git"
+  },
+  "license": "ISC",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
+    "@svgr/webpack": "^6.3.1",
+    "@types/assets-webpack-plugin": "^7.1.0",
+    "@types/node": "^18.7.3",
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/parser": "^5.33.0",
+    "assets-webpack-plugin": "^7.1.1",
+    "autoprefixer": "^10.4.8",
+    "babel-loader": "^8.2.5",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^4.0.0",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-webpack": "^0.13.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "less": "^4.1.3",
+    "less-loader": "^11.0.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "mini-svg-data-uri": "^1.4.4",
+    "postcss": "^8.4.16",
+    "postcss-combine-media-query": "^1.0.1",
+    "postcss-csso": "^6.0.1",
+    "postcss-loader": "^7.0.1",
+    "postcss-sort-media-queries": "^4.2.1",
+    "prettier": "^2.7.1",
+    "react-refresh": "^0.14.0",
+    "sass": "^1.54.4",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.4",
+    "ts-loader": "^9.3.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.10.0"
+  },
+  "dependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "axios": "^0.27.2",
+    "core-js": "^3.24.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "regenerator-runtime": "^0.13.9"
+  }
+}

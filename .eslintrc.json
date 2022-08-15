@@ -1,0 +1,79 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/recommended",
+    "plugin:import/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "prettier"
+  ],
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    },
+    "import/resolver": {
+      // change here + tsconfig.json + jest.config.js + webpack/config/paths.ts
+      "alias": {
+        "map": [
+          ["@", "./src"],
+          ["@UI", "./src/components/UI"],
+          ["@hooks", "./src/hooks"],
+          ["@useSelector", "./src/store/hooks/useSelector.ts"],
+          ["@useDispatch", "./src/store/hooks/useDispatch.ts"],
+          ["@SVG", "./src/assets/SVG"],
+          ["@utils", "./src/utils"]
+        ],
+        "extensions": [".ts", ".tsx", ".js", ".jsx", ".css", ".less", ".scss", ".sass", ".svg"]
+      }
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "tabWidth": 2,
+        "bracketSpacing": false,
+        "bracketSameLine": false,
+        "semi": true,
+        "requirePragma": false,
+        "proseWrap": "preserve",
+        "trailingComma": "none",
+        "singleQuote": true,
+        "printWidth": 120,
+        "endOfLine": "auto",
+        "arrowParens": "always"
+      }
+    ],
+    "react/prop-types": "off",
+    "react/jsx-filename-extension": [1, {"extensions": [".tsx", ".ts"]}],
+    "react/display-name": "off",
+    "no-console": "warn",
+    "import/export": 0,
+    "import/no-unresolved": ["error", {
+      "ignore": [ "\\.svg" ]
+    }],
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react-hooks/exhaustive-deps": "off"
+  }
+}
