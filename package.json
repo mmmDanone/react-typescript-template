@@ -33,7 +33,7 @@
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
     "@svgr/webpack": "^6.3.1",
     "@types/assets-webpack-plugin": "^7.1.0",
-    "@types/node": "^18.7.8",
+    "@types/node": "^18.7.9",
     "@typescript-eslint/eslint-plugin": "^5.33.1",
     "@typescript-eslint/parser": "^5.33.1",
     "assets-webpack-plugin": "^7.1.1",
