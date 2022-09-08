@@ -27,7 +27,7 @@
     "paths": {
       "@/*": ["./*"],
       "@UI/*": ["components/UI/*"],
-      "@hooks/*": ["hooks/*"],
+      "@hooks/*": ["customHooks/*"],
       "@useSelector": ["store/hooks/useSelector.ts"],
       "@useDispatch": ["store/hooks/useDispatch.ts"],
       "@SVG/*": ["assets/SVG/*"],

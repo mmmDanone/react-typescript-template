@@ -14,7 +14,7 @@ export default <const>{
   alias: {
     '@': path.resolve(__dirname, 'src'),
     '@UI': path.resolve(__dirname, 'src/components/UI'),
-    '@hooks': path.resolve(__dirname, 'src/hooks'),
+    '@hooks': path.resolve(__dirname, 'src/customHooks'),
     '@useSelector': path.resolve(__dirname, 'src/store/hooks/useSelector.ts'),
     '@useDispatch': path.resolve(__dirname, 'src/store/hooks/useDispatch.ts'),
     '@SVG': path.resolve(__dirname, 'src/assets/SVG'),

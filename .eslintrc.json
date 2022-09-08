@@ -24,7 +24,7 @@
         "map": [
           ["@", "./src"],
           ["@UI", "./src/components/UI"],
-          ["@hooks", "./src/hooks"],
+          ["@hooks", "./src/customHooks"],
           ["@useSelector", "./src/store/hooks/useSelector.ts"],
           ["@useDispatch", "./src/store/hooks/useDispatch.ts"],
           ["@SVG", "./src/assets/SVG"],
