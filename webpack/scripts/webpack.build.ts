@@ -12,7 +12,7 @@ const wpc = webpack(webpackConfig, (error, stats) => {
     return;
   }
 
-  process.stdout.write(stats!.toString(webpackConfig.stats));
+  process.stdout.write(stats!.toString(webpackConfig.stats) + '\n');
 });
 
 wpc.hooks.thisCompilation.tap('MyPlugin', () => {

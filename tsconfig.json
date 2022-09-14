@@ -20,7 +20,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "jsx": "react-jsx",
     "baseUrl": "./src",
     // change here + webpack/config/paths.ts + jest.config.js + .eslintrc.json

@@ -19,18 +19,8 @@
       "version": "detect"
     },
     "import/resolver": {
-      // change here + tsconfig.json + jest.config.js + webpack/config/paths.ts
-      "alias": {
-        "map": [
-          ["@", "./src"],
-          ["@UI", "./src/components/UI"],
-          ["@hooks", "./src/customHooks"],
-          ["@useSelector", "./src/store/hooks/useSelector.ts"],
-          ["@useDispatch", "./src/store/hooks/useDispatch.ts"],
-          ["@SVG", "./src/assets/SVG"],
-          ["@utils", "./src/utils"]
-        ],
-        "extensions": [".ts", ".tsx", ".js", ".jsx", ".css", ".less", ".scss", ".sass", ".svg"]
+      "typescript": {
+        "project": "./tsconfig.json"
       }
     }
   },
@@ -69,9 +59,9 @@
     "react/display-name": "off",
     "no-console": "warn",
     "import/export": 0,
-    "import/no-unresolved": ["error", {
-      "ignore": [ "\\.svg" ]
-    }],
+    "import/no-named-as-default": 0,
+    "import/no-named-as-default-member": 0,
+    "import/no-duplicates": ["error", {"considerQueryString": true}],
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "react-hooks/exhaustive-deps": "off"

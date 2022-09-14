@@ -1,4 +1,5 @@
 import {Configuration} from 'webpack';
+import tsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 import {isDev, isProd, isWebPackDevServer} from './mode';
 import paths from './paths';
 
@@ -17,6 +18,7 @@ import lessModuleRules from './assets/rules/lessModule';
 import svgRules from './assets/rules/svg';
 
 //plugins
+import forkTSCheckerPlugin from './assets/plugins/forkTSCheckerPlugin';
 import htmlWebpackPlugin from './assets/plugins/htmlWebpackPlugin';
 import esLintPlugin from './assets/plugins/esLintPlugin';
 import reactRefreshWebpackPlugin from './assets/plugins/reactRefreshWebpackPlugin';
@@ -53,8 +55,8 @@ export default <Configuration>{
   },
   context: paths.srcPath,
   resolve: {
-    alias: paths.alias,
-    extensions: ['.ts', '.tsx', '.js', '.jsx']
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    plugins: [new tsconfigPathsPlugin()]
   },
   watch: isDev && !isWebPackDevServer,
   target: isWebPackDevServer ? 'web' : 'browserslist',
@@ -72,8 +74,9 @@ export default <Configuration>{
     ]
   },
   plugins: [
-    htmlWebpackPlugin(),
+    forkTSCheckerPlugin(),
     esLintPlugin(),
+    htmlWebpackPlugin(),
     isDev && isWebPackDevServer && reactRefreshWebpackPlugin(),
     isProd && miniCSSExtractPlugin(),
     assetsPlugin()
