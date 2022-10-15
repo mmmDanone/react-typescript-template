@@ -28,8 +28,7 @@
       "@/*": ["./*"],
       "@UI/*": ["components/UI/*"],
       "@hooks/*": ["customHooks/*"],
-      "@useSelector": ["store/hooks/useSelector.ts"],
-      "@useDispatch": ["store/hooks/useDispatch.ts"],
+      "@reduxHooks": ["redux/hooks"],
       "@SVG/*": ["assets/SVG/*"],
       "@utils/*": ["utils/*"]
     }
