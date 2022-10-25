@@ -16,8 +16,23 @@ export const App: React.FC = () => {
   return (
     <div>
       <div>
-        <NavLink to="/">Main</NavLink>
-        <NavLink to="/svg_test">Test</NavLink>
+        <ul
+          style={{
+            listStyle: 'none',
+            display: 'flex',
+            gap: '15px'
+          }}
+        >
+          <li>
+            <NavLink to="/">Main</NavLink>
+          </li>
+          <li>
+            <NavLink to="/redux_async">async</NavLink>
+          </li>
+          <li>
+            <NavLink to="/svg_test">Test SVG</NavLink>
+          </li>
+        </ul>
       </div>
       <Outlet />
     </div>

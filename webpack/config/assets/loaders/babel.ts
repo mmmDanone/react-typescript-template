@@ -5,7 +5,7 @@ export default (): RuleSetUseItem => {
   const OptionsPresetENV = {
     loose: true,
     useBuiltIns: 'usage',
-    corejs: '3.25'
+    corejs: '3.26'
   };
 
   const presets = [

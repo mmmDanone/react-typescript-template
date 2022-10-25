@@ -5,17 +5,27 @@ import {ProvidersLoader} from './ProvidersLoader';
 import {PageSuspense} from './pages/PageSuspense';
 
 const Redux = lazy(() => import(/*webpackChunkName: 'redux'*/ '@/pages/Redux'));
+const ReduxAsync = lazy(() => import(/*webpackChunkName: 'redux_async'*/ '@/pages/ReduxAsync'));
 const SVGTest = lazy(() => import(/*webpackChunkName: 'svg_test'*/ '@/pages/SVGTest'));
 
 const routes = createBrowserRouter([
   {
+    path: '/',
     element: <ProvidersLoader />,
     children: [
       {
-        index: true,
+        path: '/',
         element: (
           <PageSuspense>
             <Redux />
+          </PageSuspense>
+        )
+      },
+      {
+        path: '/redux_async',
+        element: (
+          <PageSuspense>
+            <ReduxAsync />
           </PageSuspense>
         )
       },
