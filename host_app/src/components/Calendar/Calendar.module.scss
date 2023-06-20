@@ -1,0 +1,60 @@
+.calendar {
+  display: inline-block;
+}
+
+.controlPanel {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  max-width: 745px;
+}
+
+.currentMonth {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.tTest {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  max-width: 745px;
+
+  th,
+  td {
+    border: 1px solid #000;
+  }
+
+  th {
+    padding: 2px 5px;
+  }
+
+  div {
+    aspect-ratio: 1/1;
+  }
+}
+
+.day {
+  position: relative;
+  cursor: default;
+  font-size: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &CurrentMonth {
+    cursor: pointer;
+  }
+
+  &NotCurrentMonth {
+    color: #9e9e9e;
+  }
+
+  &Weekend {
+    color: #f00;
+
+    &NotCurrentMonth {
+      color: #ffa5a5;
+    }
+  }
+}
